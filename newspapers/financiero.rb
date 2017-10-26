@@ -1,5 +1,5 @@
 module Newspaper
-  class Financiero
+  module Financiero
     Url = 'http://www.elfinanciero.com.mx/rss/'.freeze
 
     def self.articles
@@ -11,8 +11,6 @@ module Newspaper
           pub_date: parse_datetime(article.children[5].children.text) }
       end
     end
-
-    private
 
     def self.parse_datetime(string)
       date = DateTime.parse(string)
