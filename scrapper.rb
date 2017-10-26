@@ -3,7 +3,7 @@ require 'active_support/all'
 Bundler.require(:default)
 Dir['./newspapers/*.rb'].each {|file| require file}
 
-articles = Newspaper::Reforma.articles
+articles = Newspaper::Financiero.articles
 
 print ""
 

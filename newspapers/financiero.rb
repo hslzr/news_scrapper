@@ -8,7 +8,8 @@ module Newspaper
       articles = raw_articles.map do |article|
         { title: article.children[1].children.text,
           description: article.children[3].children.text,
-          pub_date: parse_datetime(article.children[5].children.text) }
+          pub_date: parse_datetime(article.children[5].children.text),
+          link: article.children[7].children.text }
       end
     end
 
