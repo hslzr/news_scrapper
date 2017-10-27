@@ -5,9 +5,11 @@ Simple web scrapping tool for some MX newspapers.
 ### Getting started
 
 ```sh
-git clone git@github.com:hslzr/news_scrapper.git
+$ git clone git@github.com:hslzr/news_scrapper.git
 
-docker build . -t news_scrapper
+$ cd news_scrapper
+
+$ docker build . -t news_scrapper
 ```
 
 ### Run the project
@@ -19,3 +21,7 @@ docker run \
 --volume "$PWD":/usr/src/app \
 news_scrapper
 ```
+
+### Contributing
+
+Plz don't
