@@ -7,7 +7,7 @@ Bundler.require(:default)
 Dir['./newspapers/*.rb'].each {|file| require file}
 
 
-articles = Newspaper::Reforma.articles
+articles = Newspaper::Forbes.articles
 
 print ""
 
