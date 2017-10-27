@@ -1,9 +1,13 @@
 require 'bundler'
+require 'rss'
+require 'open-uri'
 require 'active_support/all'
+
 Bundler.require(:default)
 Dir['./newspapers/*.rb'].each {|file| require file}
 
-articles = Newspaper::Financiero.articles
+
+articles = Newspaper::Reforma.articles
 
 print ""
 
