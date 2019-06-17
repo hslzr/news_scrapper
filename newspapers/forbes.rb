@@ -1,10 +1,10 @@
 module Newspaper
   module Forbes
-    Url = 'http://www.forbes.com.mx/feed/'.freeze
+    URL = 'http://www.forbes.com.mx/feed/'.freeze
 
     def self.articles
       articles = []
-      open(Url) do |rss|
+      open(URL) do |rss|
         feed = RSS::Parser.parse(rss)
         articles = feed.items.map do |item|
           { title: item.title,

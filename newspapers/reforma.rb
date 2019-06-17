@@ -1,10 +1,10 @@
 module Newspaper
   module Reforma
-    Url = 'http://www.reforma.com/rss/portada.xml'.freeze
+    URL = 'http://www.reforma.com/rss/portada.xml'.freeze
 
     def self.articles
       articles = []
-      open(Url) do |rss|
+      open(URL) do |rss|
         feed = RSS::Parser.parse(rss)
         articles = feed.items.map do |item|
           { title: item.title,

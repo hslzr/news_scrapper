@@ -1,10 +1,10 @@
 module Newspaper
   module Financiero
-    Url = 'http://www.elfinanciero.com.mx/rss/'.freeze
+    URL = 'http://www.elfinanciero.com.mx/rss/'.freeze
 
     def self.articles
       articles = []
-      open(Url) do |rss|
+      open(URL) do |rss|
         feed = RSS::Parser.parse(rss)
         articles = feed.items.map do |item|
           { title: item.title,
