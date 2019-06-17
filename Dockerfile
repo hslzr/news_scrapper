@@ -10,7 +10,7 @@ WORKDIR /usr/src/app
 # JIT compiler for Ruby 2.6
 ENV RUBY_OPT=--jit
 
-RUN gem install --no-ri --no-rdoc bundler
+RUN gem install bundler
 
 COPY Gemfile .
 COPY Gemfile.lock .
